@@ -276,15 +276,16 @@ public class AppConfig implements AppProperties {
         m_propsconfig.setProperty("db.driver", "com.mysql.jdbc.Driver");
 
 // primary DB
-        m_propsconfig.setProperty("db.name", "Main DB");
-        m_propsconfig.setProperty("db.URL", "jdbc:mysql://localhost:3306/"); 
+//        m_propsconfig.setProperty("db.name", "Main DB");
+        m_propsconfig.setProperty("db.name", "unicentaopos");
+        m_propsconfig.setProperty("db.URL", "jdbc:mysql://localhost:3306/");
         m_propsconfig.setProperty("db.schema", "unicentaopos");
-        m_propsconfig.setProperty("db.options", "?zeroDateTimeBehavior=convertToNull");        
-        m_propsconfig.setProperty("db.user", "username");
-        m_propsconfig.setProperty("db.password", "password");     
+        m_propsconfig.setProperty("db.options", "?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false");
+        m_propsconfig.setProperty("db.user", "root");
+        m_propsconfig.setProperty("db.password", "mysql");
 
 // secondary DB        
-        m_propsconfig.setProperty("db1.name", "");        
+        m_propsconfig.setProperty("db1.name", "");
         m_propsconfig.setProperty("db1.URL", "jdbc:mysql://localhost:3306/"); 
         m_propsconfig.setProperty("db1.schema", "unicentaopos");
         m_propsconfig.setProperty("db1.options", "?zeroDateTimeBehavior=convertToNull");        

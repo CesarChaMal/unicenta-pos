@@ -1,3 +1,0 @@
-import uk.co.pos_apps.PosApps;
-System.out.println("Customer Deleted Event Fired for: "+device);
-PosApps.deleteCustomer(device, customer);
