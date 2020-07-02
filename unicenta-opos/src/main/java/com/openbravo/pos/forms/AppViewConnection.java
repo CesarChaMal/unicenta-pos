@@ -63,10 +63,10 @@ public class AppViewConnection {
                 Class.forName(props.getProperty("db.driver"), true, Thread.currentThread().getContextClassLoader());
             } else {
                 ClassLoader cloader = new URLClassLoader(new URL[] {
-                    new File(props.getProperty("db.driverlib")).toURI().toURL()});
+                    new File(props.getProperty("db.driverlib")).toURI().toURL()
+                });
                 DriverManager.registerDriver(new DriverWrapper((Driver) 
-                        Class.forName(props.getProperty("db.driver"), 
-                                true, cloader).newInstance()));
+                        Class.forName(props.getProperty("db.driver"),true, cloader).newInstance()));
             }
 
             if("true".equals(props.getProperty("db.multi"))) {
